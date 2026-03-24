@@ -1,0 +1,84 @@
+{
+  "stark": [
+    { "title": "Devise", "value": "L'Hiver arrive" },
+    { "title": "Demeure", "value": "Winterfell" },
+    { "title": "Région", "value": "Le Nord" }
+  ],
+  "lannister": [
+    { "title": "Devise", "value": "Entendre le rugissement" },
+    { "title": "Demeure", "value": "Casterly Rock" },
+    { "title": "Région", "value": "Terre de l'Ouest" }
+  ],
+  "targaryen": [
+    { "title": "Devise", "value": "Feu et Sang" },
+    { "title": "Demeure", "value": "Peyredragon (puis Port-Réal)" },
+    { "title": "Origine", "value": "Ancienne maison noble issue de Valyria" }
+  ],
+  "baratheon": [
+    { "title": "Devise", "value": "Nôtres est la Furie" },
+    { "title": "Demeure", "value": "Forts-Noirs" },
+    { "title": "Région", "value": "Terres de l'Orage" }
+  ],
+  "arryn": [
+    { "title": "Devise", "value": "Haut comme l'honneur" },
+    { "title": "Demeure", "value": "Le Nid de l'Aigle" },
+    { "title": "Région", "value": "Le Val d'Arryn" }
+  ],
+  "martell": [
+    { "title": "Devise", "value": "Indomptés, invaincus, intacts" },
+    { "title": "Demeure", "value": "Lancesoleil" },
+    { "title": "Région", "value": "Dorne" }
+  ],
+  "tyrell": [
+    { "title": "Devise", "value": "Nous grandissons" },
+    { "title": "Demeure", "value": "Hautjardin" },
+    { "title": "Région", "value": "Les Terres de Rois" }
+  ],
+  "greyjoy": [
+    { "title": "Devise", "value": "Nous ne semons pas" },
+    { "title": "Demeure", "value": "Pyk" },
+    { "title": "Région", "value": "Les Îles de Fer" }
+  ],
+  "tully": [
+    { "title": "Devise", "value": "Famille, Devoir, Honneur" },
+    { "title": "Demeure", "value": "Riverrun" },
+    { "title": "Région", "value": "Les Terres de Rivière" }
+  ],
+  "bolton": [
+    { "title": "Devise", "value": "Notre lame est affûtée" },
+    { "title": "Demeure", "value": "Les Forts" },
+    { "title": "Région", "value": "Le Nord" }
+  ],
+  "vanbois": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "cleos": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "baremmon": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "hawick": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "grafton": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "frey": [
+    { "title": "Devise", "value": "Nous maintenons" },
+    { "title": "Demeure", "value": "Les Jumeaux" },
+    { "title": "Région", "value": "Les Terres de Rivière" }
+  ],
+  "cuilletre": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "chenu": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "whent": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ],
+  "santagar": [
+    { "title": "Sigil", "value": "À compléter via La Garde de Nuit" }
+  ]
+}

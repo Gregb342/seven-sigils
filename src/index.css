@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Source+Sans+3:wght@400;600;700&display=swap');
+
+:root {
+  --ink: #191919;
+  --ink-dim: #5a504a;
+  --line: #d6c7bb;
+  --card-bg: rgba(255, 250, 245, 0.9);
+  --panel-bg: rgba(255, 245, 234, 0.85);
+  --accent-1: #b03a2e;
+  --accent-2: #1c4766;
+  --accent-link: #6a241d;
+  --shadow-sm: 0 8px 18px rgba(23, 23, 23, 0.16);
+  --shadow-lg: 0 18px 45px rgba(23, 23, 23, 0.19);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  font-family: 'Source Sans 3', 'Segoe UI', sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  background:
+    radial-gradient(circle at 8% 8%, rgba(231, 140, 82, 0.28), transparent 32%),
+    radial-gradient(circle at 92% 14%, rgba(39, 95, 131, 0.24), transparent 36%),
+    linear-gradient(170deg, #efe0d1 0%, #f8efe6 45%, #f2dfcf 100%);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--ink);
+  font-family: 'Cinzel', Georgia, serif;
+  font-weight: 700;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
