@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { QuizGameService } from '../../application/usecases/quizGameService'
-import type { Blazon } from '../../domain/models/types'
+import type { Blazon, Difficulty } from '../../domain/models/types'
 import type { BestScoreStore, BlazonRepository, RandomProvider } from '../../domain/ports'
 
 const makeBlazon = (slug: string): Blazon => ({
@@ -27,6 +27,11 @@ class InMemoryRepository implements BlazonRepository {
   }
 
   async getAll(): Promise<Blazon[]> {
+    return this.blazons
+  }
+
+  async getByDifficulty(difficulty: Difficulty): Promise<Blazon[]> {
+    void difficulty
     return this.blazons
   }
 }

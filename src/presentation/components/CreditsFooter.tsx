@@ -1,4 +1,6 @@
 export function CreditsFooter() {
+  const currentYear = new Date().getFullYear()
+
   return (
     <footer className="credits" aria-label="Credits et licence">
       <p>
@@ -16,6 +18,12 @@ export function CreditsFooter() {
           rel="noopener noreferrer"
         >
           La Garde de Nuit
+        </a>
+      </p>
+      <p>
+        Copyright {currentYear} Seven Sigils - Gregoire Bouteillier - {' '}
+        <a href="https://github.com/Gregb342/" target="_blank" rel="noopener noreferrer">
+          github.com/Gregb342
         </a>
       </p>
     </footer>

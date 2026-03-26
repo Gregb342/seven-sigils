@@ -1,8 +1,21 @@
-import type { Attribution, Blazon } from '../../domain/models/types'
+import type { Attribution, Blazon, HouseHint } from '../../domain/models/types'
 import { toFamilyLabel } from '../../domain/services/familyLabel'
-import { attributionBySlug, defaultAttribution, hintsBySlug } from './attributionMap'
+import { getBlazonDbEntry } from '../data/blazonDatabase'
+import { attributionBySlug, defaultAttribution } from './attributionMap'
 
 const FILE_PATTERN = /^Blason-(.+)-2014-v01-256px\.png$/i
+
+interface ToBlazonOptions {
+  allowAltVariant?: boolean
+  familyLabel?: string
+  housePageUrl?: string
+  hints?: HouseHint[]
+  kind?: Blazon['kind']
+  variantOf?: string
+  motto?: string
+  domain?: string
+  translation?: string
+}
 
 export function extractFileName(path: string): string {
   const parts = path.split('/')
@@ -11,6 +24,15 @@ export function extractFileName(path: string): string {
 
 export function isAltVariant(slug: string): boolean {
   return slug === 'alt' || /^alt\d*$/.test(slug) || slug.endsWith('-alt')
+}
+
+export function extractFamilySlug(fileName: string): string | null {
+  const matches = fileName.match(FILE_PATTERN)
+  if (!matches) {
+    return null
+  }
+
+  return matches[1]
 }
 
 export function buildSourcePageUrl(fileName: string): string {
@@ -33,22 +55,23 @@ export function buildAttribution(slug: string, sourcePageUrl: string): Attributi
   return defaultAttribution(sourcePageUrl)
 }
 
-export function toBlazon(filePath: string, imageUrl: string): Blazon | null {
+export function toBlazon(filePath: string, imageUrl: string, options: ToBlazonOptions = {}): Blazon | null {
   const fileName = extractFileName(filePath)
-  const matches = fileName.match(FILE_PATTERN)
+  const familySlug = extractFamilySlug(fileName)
 
-  if (!matches) {
+  if (!familySlug) {
     return null
   }
 
-  const familySlug = matches[1]
-  if (isAltVariant(familySlug)) {
+  if (!options.allowAltVariant && isAltVariant(familySlug)) {
     return null
   }
 
-  const familyLabel = toFamilyLabel(familySlug)
+  const dbEntry = getBlazonDbEntry(familySlug)
+
+  const familyLabel = options.familyLabel ?? dbEntry?.label ?? toFamilyLabel(familySlug)
   const sourcePageUrl = buildSourcePageUrl(fileName)
-  const housePageUrl = buildHousePageUrl(familyLabel)
+  const housePageUrl = options.housePageUrl ?? dbEntry?.housePageUrl ?? buildHousePageUrl(familyLabel)
 
   return {
     id: familySlug,
@@ -57,7 +80,12 @@ export function toBlazon(filePath: string, imageUrl: string): Blazon | null {
     fileName,
     imageUrl,
     housePageUrl,
-    hints: hintsBySlug[familySlug] ?? [],
+    hints: options.hints ?? dbEntry?.hints ?? [],
+    kind: options.kind ?? dbEntry?.kind,
+    variantOf: options.variantOf ?? dbEntry?.variantOf,
+    motto: options.motto ?? dbEntry?.motto,
+    domain: options.domain ?? dbEntry?.domain,
+    translation: options.translation ?? dbEntry?.translation,
     attribution: buildAttribution(familySlug, sourcePageUrl),
   }
 }

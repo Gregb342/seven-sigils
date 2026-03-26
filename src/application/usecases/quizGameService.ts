@@ -44,7 +44,7 @@ export class QuizGameService {
   }
 
   async start(settings: GameSettings): Promise<SessionSnapshot> {
-    const all = await this.repository.getAll()
+    const pool = await this.repository.getByDifficulty(settings.difficulty)
 
     this.snapshot = {
       status: 'running',
@@ -52,7 +52,7 @@ export class QuizGameService {
       score: 0,
       bestScore: this.bestScoreStore.getBestScore(),
       roundIndex: 1,
-      question: createQuestion(all, settings.difficulty, this.random, this.recentIds),
+      question: createQuestion(pool, settings.difficulty, this.random, this.recentIds),
       answerLocked: false,
       selectedAnswer: null,
       lastResult: null,
@@ -101,9 +101,9 @@ export class QuizGameService {
       return this.snapshot
     }
 
-    const all = await this.repository.getAll()
+    const pool = await this.repository.getByDifficulty(this.snapshot.settings.difficulty)
     const nextQuestion = createQuestion(
-      all,
+      pool,
       this.snapshot.settings.difficulty,
       this.random,
       this.recentIds,

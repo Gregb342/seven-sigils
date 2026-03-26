@@ -1,5 +1,4 @@
-import type { Attribution, HouseHint } from '../../domain/models/types'
-import hintData from '../data/hints.json'
+import type { Attribution } from '../../domain/models/types'
 
 const CC_BY_SA_4_LABEL = 'Creative Commons BY-SA 4.0'
 const CC_BY_SA_4_URL = 'https://creativecommons.org/licenses/by-sa/4.0/'
@@ -21,5 +20,3 @@ export const attributionBySlug: Record<string, Omit<Attribution, 'sourcePageUrl'
       'Le wiki indique qu\'une partie des meubles peut provenir de sources tierces. Attribution affichée selon la page fichier.',
   },
 }
-
-export const hintsBySlug: Record<string, HouseHint[]> = hintData as Record<string, HouseHint[]>

@@ -22,6 +22,11 @@ export interface Blazon {
   imageUrl: string
   housePageUrl: string
   hints: HouseHint[]
+  kind?: 'family' | 'special' | 'variant'
+  variantOf?: string
+  motto?: string
+  domain?: string
+  translation?: string
   attribution: Attribution
 }
 

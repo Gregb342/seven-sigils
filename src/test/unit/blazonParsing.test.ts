@@ -40,4 +40,13 @@ describe('blazonParsing', () => {
     const blazon = toBlazon('/All Blasons/Blason-alt-2014-v01-256px.png', '/assets/alt.png')
     expect(blazon).toBeNull()
   })
+
+  it('can include alt variants when explicitly allowed', () => {
+    const blazon = toBlazon('/All Blasons/Blason-alt-2014-v01-256px.png', '/assets/alt.png', {
+      allowAltVariant: true,
+      familyLabel: 'Alt',
+    })
+    expect(blazon).not.toBeNull()
+    expect(blazon?.familySlug).toBe('alt')
+  })
 })

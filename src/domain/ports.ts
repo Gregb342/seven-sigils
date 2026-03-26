@@ -1,4 +1,4 @@
-import type { Blazon } from './models/types'
+import type { Blazon, Difficulty } from './models/types'
 
 export interface RandomProvider {
   next(): number
@@ -6,6 +6,7 @@ export interface RandomProvider {
 
 export interface BlazonRepository {
   getAll(): Promise<Blazon[]>
+  getByDifficulty(difficulty: Difficulty): Promise<Blazon[]>
 }
 
 export interface BestScoreStore {

@@ -1,0 +1,1335 @@
+{
+  "easyModeSlugs": [
+    "stark",
+    "lannister",
+    "targaryen",
+    "baratheon",
+    "arryn",
+    "martell",
+    "tyrell",
+    "greyjoy",
+    "tully",
+    "bolton",
+    "frey",
+    "mormont",
+    "karstark",
+    "clegane",
+    "florent",
+    "hightower",
+    "dayne",
+    "royce",
+    "reed",
+    "tarly",
+    "mallister",
+    "selmy",
+    "bracken",
+    "crakehall",
+    "glover",
+    "manderly",
+    "connington",
+    "dondarrion",
+    "velaryon",
+    "redwyne"
+  ],
+  "entries": {
+    "aemonrivers": {
+      "label": "Aemonrivers"
+    },
+    "aigracier": {
+      "label": "Aigracier"
+    },
+    "algood": {
+      "label": "Algood"
+    },
+    "allyrion": {
+      "label": "Allyrion"
+    },
+    "alt": {
+      "label": "Alt"
+    },
+    "alt1": {
+      "label": "Alt1"
+    },
+    "alt2": {
+      "label": "Alt2"
+    },
+    "alt3": {
+      "label": "Alt3"
+    },
+    "alt4": {
+      "label": "Alt4"
+    },
+    "alt5": {
+      "label": "Alt5"
+    },
+    "alt6": {
+      "label": "Alt6"
+    },
+    "alt7": {
+      "label": "Alt7"
+    },
+    "ambrose": {
+      "label": "Ambrose"
+    },
+    "appleton": {
+      "label": "Appleton"
+    },
+    "arcenciel": {
+      "label": "Arcenciel"
+    },
+    "ardoise": {
+      "label": "Ardoise"
+    },
+    "arlan": {
+      "label": "Arlan"
+    },
+    "arryn": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Aussi haut que l'honneur"
+        },
+        {
+          "title": "Demeure",
+          "value": "Le Nid de l'Aigle"
+        },
+        {
+          "title": "Region",
+          "value": "Val d'Arryn"
+        }
+      ]
+    },
+    "aubier": {
+      "label": "Aubier"
+    },
+    "baelish": {
+      "label": "Baelish"
+    },
+    "baratheon": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Notres est la Furie"
+        },
+        {
+          "title": "Demeure",
+          "value": "Accalmie"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Orage"
+        }
+      ]
+    },
+    "barbrey": {
+      "label": "Barbrey"
+    },
+    "baremmon": {
+      "label": "Baremmon"
+    },
+    "belmore": {
+      "label": "Belmore"
+    },
+    "bennis": {
+      "label": "Bennis"
+    },
+    "bettley": {
+      "label": "Bettley"
+    },
+    "beurpuits": {
+      "label": "Beurpuits"
+    },
+    "blanetree": {
+      "label": "Blanetree"
+    },
+    "blount": {
+      "label": "Blount"
+    },
+    "bolling": {
+      "label": "Bolling"
+    },
+    "bolton": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Nos lames sont aiguisees"
+        },
+        {
+          "title": "Demeure",
+          "value": "Le Fort Terreur"
+        },
+        {
+          "title": "Region",
+          "value": "Le Nord"
+        }
+      ]
+    },
+    "bonfrere": {
+      "label": "Bonfrere"
+    },
+    "bonleu": {
+      "label": "Bonleu"
+    },
+    "bonru": {
+      "label": "Bonru"
+    },
+    "borell": {
+      "label": "Borell"
+    },
+    "botley": {
+      "label": "Botley"
+    },
+    "boule": {
+      "label": "Boule"
+    },
+    "boulenfeu": {
+      "label": "Boulenfeu"
+    },
+    "boulleau": {
+      "label": "Boulleau"
+    },
+    "bracken": {
+      "label": "Bracken"
+    },
+    "brax": {
+      "label": "Brax"
+    },
+    "bridges": {
+      "label": "Bridges"
+    },
+    "bronn": {
+      "label": "Bronn"
+    },
+    "broom": {
+      "label": "Broom"
+    },
+    "brousse": {
+      "label": "Brousse"
+    },
+    "brune": {
+      "label": "Brune"
+    },
+    "buckler": {
+      "label": "Buckler"
+    },
+    "buckwell": {
+      "label": "Buckwell"
+    },
+    "bulwer": {
+      "label": "Bulwer"
+    },
+    "burley": {
+      "label": "Burley"
+    },
+    "cafferen": {
+      "label": "Cafferen"
+    },
+    "cargyll": {
+      "label": "Cargyll"
+    },
+    "caron": {
+      "label": "Caron"
+    },
+    "cassel": {
+      "label": "Cassel"
+    },
+    "castelfoyer": {
+      "label": "Castelfoyer"
+    },
+    "caswell": {
+      "label": "Caswell"
+    },
+    "celtigar": {
+      "label": "Celtigar"
+    },
+    "cendregue": {
+      "label": "Cendregue"
+    },
+    "cendregue-alt": {
+      "kind": "variant",
+      "variantOf": "cendregue",
+      "includeInHard": false
+    },
+    "cerwyn": {
+      "label": "Cerwyn"
+    },
+    "chantecoq": {
+      "label": "Chantecoq"
+    },
+    "charlton": {
+      "label": "Charlton"
+    },
+    "chauney": {
+      "label": "Chauney"
+    },
+    "chelsted": {
+      "label": "Chelsted"
+    },
+    "chenu": {
+      "label": "Chenu"
+    },
+    "chester": {
+      "label": "Chester"
+    },
+    "chyttering": {
+      "label": "Chyttering"
+    },
+    "cirley": {
+      "label": "Cirley"
+    },
+    "clegane": {
+      "label": "Clegane"
+    },
+    "cleos": {
+      "label": "Cleos"
+    },
+    "cole": {
+      "label": "Cole"
+    },
+    "colen": {
+      "label": "Colen"
+    },
+    "condon": {
+      "label": "Condon"
+    },
+    "connington": {
+      "label": "Connington"
+    },
+    "corbois": {
+      "label": "Corbois"
+    },
+    "corbray": {
+      "label": "Corbray"
+    },
+    "cordwayner": {
+      "label": "Cordwayner"
+    },
+    "cossepois": {
+      "label": "Cossepois"
+    },
+    "costayne": {
+      "label": "Costayne"
+    },
+    "crakehall": {
+      "label": "Crakehall"
+    },
+    "crane": {
+      "label": "Crane"
+    },
+    "cressey": {
+      "label": "Cressey"
+    },
+    "crowl": {
+      "label": "Crowl"
+    },
+    "cuilletre": {
+      "label": "Cuilletre"
+    },
+    "cuy": {
+      "label": "Cuy"
+    },
+    "dalluve": {
+      "label": "Dalluve"
+    },
+    "dalt": {
+      "label": "Dalt"
+    },
+    "darry": {
+      "label": "Darry"
+    },
+    "dayne": {
+      "label": "Dayne"
+    },
+    "delanoue": {
+      "label": "Delanoue"
+    },
+    "desessaims": {
+      "label": "Desessaims"
+    },
+    "doggett": {
+      "label": "Doggett"
+    },
+    "dombeck": {
+      "label": "Dombeck"
+    },
+    "dondarrion": {
+      "label": "Dondarrion"
+    },
+    "donniger": {
+      "label": "Donniger"
+    },
+    "drox": {
+      "label": "Drox"
+    },
+    "dunk": {
+      "label": "Dunk",
+      "kind": "special",
+      "includeInHard": true,
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Duncan_Le_Grand",
+      "hints": [
+        {
+          "title": "Type",
+          "value": "Blason personnel, pas une maison hereditaire."
+        }
+      ]
+    },
+    "dunn": {
+      "label": "Dunn"
+    },
+    "durouvre": {
+      "label": "Durouvre"
+    },
+    "dustin": {
+      "label": "Dustin"
+    },
+    "edgerton": {
+      "label": "Edgerton"
+    },
+    "egen": {
+      "label": "Egen"
+    },
+    "elesham": {
+      "label": "Elesham"
+    },
+    "erongue": {
+      "label": "Erongue"
+    },
+    "errol": {
+      "label": "Errol"
+    },
+    "estremont": {
+      "label": "Estremont"
+    },
+    "estren": {
+      "label": "Estren"
+    },
+    "euron": {
+      "label": "Euron"
+    },
+    "falwell": {
+      "label": "Falwell"
+    },
+    "farman": {
+      "label": "Farman"
+    },
+    "farring": {
+      "label": "Farring"
+    },
+    "fell": {
+      "label": "Fell"
+    },
+    "fengue": {
+      "label": "Fengue"
+    },
+    "ferboys": {
+      "label": "Ferboys"
+    },
+    "ferren": {
+      "label": "Ferren"
+    },
+    "feunoyr": {
+      "label": "Feunoyr"
+    },
+    "filsduguerrier": {
+      "label": "Filsduguerrier"
+    },
+    "fleaufort": {
+      "label": "Fleaufort"
+    },
+    "florent": {
+      "label": "Florent"
+    },
+    "foin": {
+      "label": "Foin"
+    },
+    "follard": {
+      "label": "Follard"
+    },
+    "forestier": {
+      "label": "Forestier"
+    },
+    "forrest": {
+      "label": "Forrest"
+    },
+    "fort": {
+      "label": "Fort"
+    },
+    "fossovoie": {
+      "label": "Fossovoie"
+    },
+    "fretilletrique": {
+      "label": "Fretilletrique"
+    },
+    "frey": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Nous tenons ensemble"
+        },
+        {
+          "title": "Demeure",
+          "value": "Les Jumeaux"
+        },
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
+    },
+    "froideseaux": {
+      "label": "Froideseaux"
+    },
+    "gargalen": {
+      "label": "Gargalen"
+    },
+    "garner": {
+      "label": "Garner"
+    },
+    "gaunt": {
+      "label": "Gaunt"
+    },
+    "gdn": {
+      "label": "Gdn"
+    },
+    "gerblance": {
+      "label": "Gerblance"
+    },
+    "glover": {
+      "label": "Glover"
+    },
+    "gouer": {
+      "label": "Gouer"
+    },
+    "graceford": {
+      "label": "Graceford"
+    },
+    "grafton": {
+      "label": "Grafton"
+    },
+    "grandison": {
+      "label": "Grandison"
+    },
+    "graves": {
+      "label": "Graves"
+    },
+    "grell": {
+      "label": "Grell"
+    },
+    "greyfer": {
+      "label": "Greyfer"
+    },
+    "greyjoy": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Nous ne semons pas"
+        },
+        {
+          "title": "Demeure",
+          "value": "Pyk"
+        },
+        {
+          "title": "Region",
+          "value": "Iles de Fer"
+        }
+      ]
+    },
+    "grimm": {
+      "label": "Grimm"
+    },
+    "guede": {
+      "label": "Guede"
+    },
+    "hamell": {
+      "label": "Hamell"
+    },
+    "harclay": {
+      "label": "Harclay"
+    },
+    "hardyng": {
+      "label": "Hardyng"
+    },
+    "harloi": {
+      "label": "Harloi"
+    },
+    "harlton": {
+      "label": "Harlton"
+    },
+    "harte": {
+      "label": "Harte"
+    },
+    "hastif": {
+      "label": "Hastif"
+    },
+    "hastwyck": {
+      "label": "Hastwyck"
+    },
+    "hawick": {
+      "label": "Hawick"
+    },
+    "hawthorne": {
+      "label": "Hawthorne"
+    },
+    "herpivoie": {
+      "label": "Herpivoie"
+    },
+    "herston": {
+      "label": "Herston"
+    },
+    "hersy": {
+      "label": "Hersy"
+    },
+    "hightower": {
+      "label": "Hightower"
+    },
+    "hollard": {
+      "label": "Hollard"
+    },
+    "horpe": {
+      "label": "Horpe"
+    },
+    "houett": {
+      "label": "Houett"
+    },
+    "hugh": {
+      "label": "Hugh"
+    },
+    "hunt": {
+      "label": "Hunt"
+    },
+    "hutcheson": {
+      "label": "Hutcheson"
+    },
+    "if": {
+      "label": "If"
+    },
+    "illifer": {
+      "label": "Illifer"
+    },
+    "ironsmith": {
+      "label": "Ironsmith"
+    },
+    "jardinier": {
+      "label": "Jardinier"
+    },
+    "jast": {
+      "label": "Jast"
+    },
+    "jehan": {
+      "label": "Jehan"
+    },
+    "jordayne": {
+      "label": "Jordayne"
+    },
+    "karstark": {
+      "label": "Karstark"
+    },
+    "keath": {
+      "label": "Keath"
+    },
+    "kellington": {
+      "label": "Kellington"
+    },
+    "kenning": {
+      "label": "Kenning"
+    },
+    "kidwell": {
+      "label": "Kidwell"
+    },
+    "knott": {
+      "label": "Knott"
+    },
+    "lake": {
+      "label": "Lake"
+    },
+    "langward": {
+      "label": "Langward"
+    },
+    "lannister": {
+      "motto": "Entendre le rugissement",
+      "domain": "Terres de l'Ouest",
+      "translation": "Hear Me Roar",
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Entendre le rugissement"
+        },
+        {
+          "title": "Demeure",
+          "value": "Casterly Rock"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        }
+      ]
+    },
+    "lecharpentier": {
+      "label": "Lecharpentier"
+    },
+    "lefford": {
+      "label": "Lefford"
+    },
+    "lejuste": {
+      "label": "Lejuste"
+    },
+    "lepicier": {
+      "label": "Lepicier"
+    },
+    "levoi": {
+      "label": "Levoi"
+    },
+    "lideuil": {
+      "label": "Lideuil"
+    },
+    "lightfoot": {
+      "label": "Lightfoot"
+    },
+    "locke": {
+      "label": "Locke"
+    },
+    "lolliston": {
+      "label": "Lolliston"
+    },
+    "lonbec": {
+      "label": "Lonbec"
+    },
+    "longuebranche": {
+      "label": "Longuebranche"
+    },
+    "lorch": {
+      "label": "Lorch"
+    },
+    "lothston": {
+      "label": "Lothston"
+    },
+    "lowther": {
+      "label": "Lowther"
+    },
+    "lyberr": {
+      "label": "Lyberr"
+    },
+    "lychester": {
+      "label": "Lychester"
+    },
+    "lydden": {
+      "label": "Lydden"
+    },
+    "lynderly": {
+      "label": "Lynderly"
+    },
+    "magnar": {
+      "label": "Magnar"
+    },
+    "maisonpierre": {
+      "label": "Maisonpierre"
+    },
+    "mallery": {
+      "label": "Mallery"
+    },
+    "mallister": {
+      "label": "Mallister"
+    },
+    "manderly": {
+      "label": "Manderly"
+    },
+    "manning": {
+      "label": "Manning"
+    },
+    "marpheux": {
+      "label": "Marpheux"
+    },
+    "marsh": {
+      "label": "Marsh"
+    },
+    "martell": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Insoumis, invaincus, intacts"
+        },
+        {
+          "title": "Demeure",
+          "value": "Lancesoleil"
+        },
+        {
+          "title": "Region",
+          "value": "Dorne"
+        }
+      ]
+    },
+    "massey": {
+      "label": "Massey"
+    },
+    "melcolm": {
+      "label": "Melcolm"
+    },
+    "merlyn": {
+      "label": "Merlyn"
+    },
+    "merryweather": {
+      "label": "Merryweather"
+    },
+    "mertyns": {
+      "label": "Mertyns"
+    },
+    "mervault": {
+      "label": "Mervault"
+    },
+    "middlebury": {
+      "label": "Middlebury"
+    },
+    "milopin": {
+      "label": "Milopin"
+    },
+    "mollen": {
+      "label": "Mollen"
+    },
+    "moore": {
+      "label": "Moore"
+    },
+    "moreland": {
+      "label": "Moreland"
+    },
+    "mormont": {
+      "label": "Mormont"
+    },
+    "morrigen": {
+      "label": "Morrigen"
+    },
+    "morue": {
+      "label": "Morue"
+    },
+    "mossegonde": {
+      "label": "Mossegonde"
+    },
+    "mousse": {
+      "label": "Mousse"
+    },
+    "mouton": {
+      "label": "Mouton"
+    },
+    "mullendore": {
+      "label": "Mullendore"
+    },
+    "myatt": {
+      "label": "Myatt"
+    },
+    "myres": {
+      "label": "Myres"
+    },
+    "negrebar": {
+      "label": "Negrebar"
+    },
+    "nerbosc": {
+      "label": "Nerbosc"
+    },
+    "noirmarees": {
+      "label": "Noirmarees"
+    },
+    "noirmont": {
+      "label": "Noirmont"
+    },
+    "norcroix": {
+      "label": "Norcroix"
+    },
+    "norridge": {
+      "label": "Norridge"
+    },
+    "norroit": {
+      "label": "Norroit"
+    },
+    "oldflowers": {
+      "label": "Oldflowers"
+    },
+    "omble": {
+      "label": "Omble"
+    },
+    "ombrich": {
+      "label": "Ombrich"
+    },
+    "orkwood": {
+      "label": "Orkwood"
+    },
+    "orme": {
+      "label": "Orme"
+    },
+    "osgris": {
+      "label": "Osgris"
+    },
+    "ouestrelin": {
+      "label": "Ouestrelin"
+    },
+    "overton": {
+      "label": "Overton"
+    },
+    "paege": {
+      "label": "Paege"
+    },
+    "parren": {
+      "label": "Parren"
+    },
+    "patreck": {
+      "label": "Patreck"
+    },
+    "pauvrescompagnons": {
+      "label": "Pauvrescompagnons"
+    },
+    "payne": {
+      "label": "Payne"
+    },
+    "peake": {
+      "label": "Peake"
+    },
+    "penrose": {
+      "label": "Penrose"
+    },
+    "perso-euron": {
+      "kind": "variant",
+      "variantOf": "greyjoy",
+      "includeInHard": false
+    },
+    "perso-hugh": {
+      "kind": "special",
+      "includeInHard": false
+    },
+    "perso-ombrich": {
+      "kind": "variant",
+      "variantOf": "ombrich",
+      "includeInHard": false
+    },
+    "pescheur": {
+      "label": "Pescheur"
+    },
+    "petibois": {
+      "label": "Petibois"
+    },
+    "piedre": {
+      "label": "Piedre"
+    },
+    "piete": {
+      "label": "Piete"
+    },
+    "pindepierre": {
+      "label": "Pindepierre"
+    },
+    "piper": {
+      "label": "Piper"
+    },
+    "pommingham": {
+      "label": "Pommingham"
+    },
+    "poole": {
+      "label": "Poole"
+    },
+    "potaunoir": {
+      "label": "Potaunoir"
+    },
+    "poulet": {
+      "label": "Poulet"
+    },
+    "predeaux": {
+      "label": "Predeaux"
+    },
+    "prestre": {
+      "label": "Prestre"
+    },
+    "prunh": {
+      "label": "Prunh"
+    },
+    "pryor": {
+      "label": "Pryor"
+    },
+    "puits": {
+      "label": "Puits"
+    },
+    "pyle": {
+      "label": "Pyle"
+    },
+    "qoherys": {
+      "label": "Qoherys"
+    },
+    "qorgyle": {
+      "label": "Qorgyle"
+    },
+    "racin": {
+      "label": "Racin"
+    },
+    "rambton": {
+      "label": "Rambton"
+    },
+    "randor": {
+      "label": "Randor"
+    },
+    "redding": {
+      "label": "Redding"
+    },
+    "redwyne": {
+      "label": "Redwyne"
+    },
+    "reed": {
+      "label": "Reed"
+    },
+    "reyne": {
+      "label": "Reyne"
+    },
+    "rhysling": {
+      "label": "Rhysling"
+    },
+    "risley": {
+      "label": "Risley"
+    },
+    "rogers": {
+      "label": "Rogers"
+    },
+    "rollingford": {
+      "label": "Rollingford"
+    },
+    "rosby": {
+      "label": "Rosby"
+    },
+    "rossard": {
+      "label": "Rossard"
+    },
+    "rougefort": {
+      "label": "Rougefort"
+    },
+    "rouxtigre": {
+      "label": "Rouxtigre"
+    },
+    "rowan": {
+      "label": "Rowan"
+    },
+    "roxton": {
+      "label": "Roxton"
+    },
+    "royce": {
+      "label": "Royce"
+    },
+    "ruthermont": {
+      "label": "Ruthermont"
+    },
+    "ryger": {
+      "label": "Ryger"
+    },
+    "rykker": {
+      "label": "Rykker"
+    },
+    "ryswell": {
+      "label": "Ryswell"
+    },
+    "salfalaise": {
+      "label": "Salfalaise"
+    },
+    "saline": {
+      "label": "Saline"
+    },
+    "santagar": {
+      "label": "Santagar"
+    },
+    "sarchamp": {
+      "label": "Sarchamp"
+    },
+    "sarwyck": {
+      "label": "Sarwyck"
+    },
+    "selmy": {
+      "label": "Selmy"
+    },
+    "serrett": {
+      "label": "Serrett"
+    },
+    "serry": {
+      "label": "Serry"
+    },
+    "shermer": {
+      "label": "Shermer"
+    },
+    "shett": {
+      "label": "Shett"
+    },
+    "sloane": {
+      "label": "Sloane"
+    },
+    "slynt": {
+      "label": "Slynt"
+    },
+    "solverre": {
+      "label": "Solverre"
+    },
+    "sombrelyn": {
+      "label": "Sombrelyn"
+    },
+    "sparr": {
+      "label": "Sparr"
+    },
+    "staedmon": {
+      "label": "Staedmon"
+    },
+    "stane": {
+      "label": "Stane"
+    },
+    "stark": {
+      "motto": "L'Hiver arrive",
+      "domain": "Le Nord",
+      "translation": "Winter is Coming",
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "L'Hiver arrive"
+        },
+        {
+          "title": "Demeure",
+          "value": "Winterfell"
+        },
+        {
+          "title": "Region",
+          "value": "Le Nord"
+        }
+      ]
+    },
+    "staunton": {
+      "label": "Staunton"
+    },
+    "stout": {
+      "label": "Stout"
+    },
+    "sunderland": {
+      "label": "Sunderland"
+    },
+    "swann": {
+      "label": "Swann"
+    },
+    "swyft": {
+      "label": "Swyft"
+    },
+    "swygert": {
+      "label": "Swygert"
+    },
+    "tallad": {
+      "label": "Tallad"
+    },
+    "tallett": {
+      "label": "Tallett"
+    },
+    "tallhart": {
+      "label": "Tallhart"
+    },
+    "tarbeck": {
+      "label": "Tarbeck"
+    },
+    "targaryen": {
+      "motto": "Feu et Sang",
+      "domain": "Peyredragon / Port-Real",
+      "translation": "Fire and Blood",
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Feu et Sang"
+        },
+        {
+          "title": "Demeure",
+          "value": "Peyredragon (puis Port-Real)"
+        },
+        {
+          "title": "Origine",
+          "value": "Ancienne maison noble issue de Valyria"
+        }
+      ]
+    },
+    "tarly": {
+      "label": "Tarly"
+    },
+    "tawney": {
+      "label": "Tawney"
+    },
+    "teague": {
+      "label": "Teague"
+    },
+    "templeton": {
+      "label": "Templeton"
+    },
+    "terrick": {
+      "label": "Terrick"
+    },
+    "thenn": {
+      "label": "Thenn"
+    },
+    "thomas": {
+      "label": "Thomas"
+    },
+    "thorne": {
+      "label": "Thorne"
+    },
+    "tignac": {
+      "label": "Tignac"
+    },
+    "timbal": {
+      "label": "Timbal"
+    },
+    "toland": {
+      "label": "Toland"
+    },
+    "torth": {
+      "label": "Torth"
+    },
+    "tourelles": {
+      "label": "Tourelles"
+    },
+    "tournebaie": {
+      "label": "Tournebaie"
+    },
+    "trant": {
+      "label": "Trant"
+    },
+    "tudbury": {
+      "label": "Tudbury"
+    },
+    "tully": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Famille, Devoir, Honneur"
+        },
+        {
+          "title": "Demeure",
+          "value": "Vivesaigues"
+        },
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
+    },
+    "tyrell": {
+      "hints": [
+        {
+          "title": "Devise",
+          "value": "Nous grandissons"
+        },
+        {
+          "title": "Demeure",
+          "value": "Hautjardin"
+        },
+        {
+          "title": "Region",
+          "value": "Le Bief"
+        }
+      ]
+    },
+    "tyssier": {
+      "label": "Tyssier"
+    },
+    "uffering": {
+      "label": "Uffering"
+    },
+    "uller": {
+      "label": "Uller"
+    },
+    "upcliff": {
+      "label": "Upcliff"
+    },
+    "uthor": {
+      "label": "Uthor"
+    },
+    "valleuse": {
+      "label": "Valleuse"
+    },
+    "van": {
+      "label": "Van"
+    },
+    "vanbois": {
+      "label": "Vanbois"
+    },
+    "vance": {
+      "label": "Vance"
+    },
+    "varnier": {
+      "label": "Varnier"
+    },
+    "vassal": {
+      "label": "Vassal"
+    },
+    "velaryon": {
+      "label": "Velaryon"
+    },
+    "vendeloyn": {
+      "label": "Vendeloyn"
+    },
+    "veneur": {
+      "label": "Veneur"
+    },
+    "verchamps": {
+      "label": "Verchamps"
+    },
+    "vikair": {
+      "label": "Vikair"
+    },
+    "volmark": {
+      "label": "Volmark"
+    },
+    "vouyvere": {
+      "label": "Vouyvere"
+    },
+    "vyprin": {
+      "label": "Vyprin"
+    },
+    "walter": {
+      "label": "Walter"
+    },
+    "waterman": {
+      "label": "Waterman"
+    },
+    "wend": {
+      "label": "Wend"
+    },
+    "wensington": {
+      "label": "Wensington"
+    },
+    "westbrook": {
+      "label": "Westbrook"
+    },
+    "westford": {
+      "label": "Westford"
+    },
+    "wex": {
+      "label": "Wex"
+    },
+    "whent": {
+      "label": "Whent"
+    },
+    "whitehill": {
+      "label": "Whitehill"
+    },
+    "willum": {
+      "label": "Willum"
+    },
+    "woolfield": {
+      "label": "Woolfield"
+    },
+    "wull": {
+      "label": "Wull"
+    },
+    "wydman": {
+      "label": "Wydman"
+    },
+    "wyl": {
+      "label": "Wyl"
+    },
+    "wylde": {
+      "label": "Wylde"
+    },
+    "wynch": {
+      "label": "Wynch"
+    },
+    "wythers": {
+      "label": "Wythers"
+    },
+    "yarwyck": {
+      "label": "Yarwyck"
+    },
+    "yelshire": {
+      "label": "Yelshire"
+    }
+  }
+}
