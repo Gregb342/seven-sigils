@@ -3,33 +3,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-}
-
-.app-header {
-  position: fixed;
-  top: 0.35rem;
-  right: 0.65rem;
-  width: auto;
-  margin: 0;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.app-title {
-  margin: 0;
-  font-size: clamp(0.68rem, 1.2vw, 0.8rem);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--ink-dim);
-  font-weight: 600;
-  opacity: 0.72;
-  line-height: 1;
 }
 
 .main-content {
   width: min(860px, 100% - 2rem);
-  margin: 1.35rem auto 1rem;
+  margin: 1rem auto 1rem;
   animation: rise-in 350ms ease-out;
 }
 
@@ -308,19 +286,8 @@
 }
 
 @media (max-width: 740px) {
-  .app-header {
-    top: 0.24rem;
-    right: 0.38rem;
-  }
-
-  .app-title {
-    font-size: 0.58rem;
-    letter-spacing: 0.03em;
-    opacity: 0.62;
-  }
-
   .main-content {
-    margin: 0.35rem auto 0.5rem;
+    margin: 0.5rem auto 0.5rem;
     width: calc(100% - 0.65rem);
   }
 

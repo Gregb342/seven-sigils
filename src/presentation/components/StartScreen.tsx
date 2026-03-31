@@ -14,8 +14,9 @@ export function StartScreen({ bestScore, loading, onStart }: StartScreenProps) {
 
   return (
     <section className="card intro-card" aria-labelledby="title">
-      <p className="eyebrow">Quiz de Blasons</p>
+      <p className="eyebrow">Seven Sigils - Version Beta</p>
       <h1 id="title">Quiz des blasons de Westeros et d'Essos</h1>
+      <h2 id="title">(VERSION BETA)</h2>
       <p className="intro-text">
         A chaque manche, identifie le blason correct parmi 4 maisons.
       </p>

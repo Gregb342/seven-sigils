@@ -37,10 +37,6 @@ function App() {
 
   return (
     <div className="app-shell">
-      <header className="app-header" aria-label="Titre de l'application">
-        <p className="app-title">Quiz de blasons</p>
-      </header>
-
       <main className="main-content">
         {snapshot.status === 'idle' && (
           <StartScreen bestScore={snapshot.bestScore} loading={loading} onStart={onStart} />
