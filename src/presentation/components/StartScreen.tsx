@@ -15,7 +15,7 @@ export function StartScreen({ bestScore, loading, onStart }: StartScreenProps) {
   return (
     <section className="card intro-card" aria-labelledby="title">
       <p className="eyebrow">Quiz de Blasons</p>
-      <h1 id="title">Reconnais les grandes familles de Westeros</h1>
+      <h1 id="title">Quiz des blasons de Westeros et d'Essos</h1>
       <p className="intro-text">
         A chaque manche, identifie le blason correct parmi 4 maisons.
       </p>

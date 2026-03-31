@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="app-shell">
       <header className="app-header" aria-label="Titre de l'application">
-        <p className="app-title">Seven Sigils</p>
+        <p className="app-title">Quiz de blasons</p>
       </header>
 
       <main className="main-content">

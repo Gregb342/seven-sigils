@@ -646,13 +646,13 @@
       "label": "Langward"
     },
     "lannister": {
-      "motto": "Entendre le rugissement",
+      "motto": "Nous Rugissons",
       "domain": "Terres de l'Ouest",
       "translation": "Hear Me Roar",
       "hints": [
         {
           "title": "Devise",
-          "value": "Entendre le rugissement"
+          "value": "Nous Rugissons"
         },
         {
           "title": "Demeure",
