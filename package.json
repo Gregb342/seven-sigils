@@ -1,12 +1,13 @@
 {
   "name": "seven-sigils",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.2",
   "description": "An interactive Game of Thrones heraldry quiz game built with React, TypeScript, and Vite.",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "release:notes": "node scripts/release-notes.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "npm-run-all test:unit test:integration",

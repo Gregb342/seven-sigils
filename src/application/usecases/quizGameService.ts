@@ -2,7 +2,7 @@ import type { BlazonRepository, BestScoreStore, RandomProvider } from '../../dom
 import type { GameSettings, RoundResult, SessionSnapshot } from '../../domain/models/types'
 import { createQuestion } from './questionFactory'
 
-const RECENT_WINDOW_SIZE = 8
+const EASY_MODE_MAX_ROUNDS = 30
 
 const defaultSettings: GameSettings = {
   mode: 'fixed',
@@ -19,7 +19,9 @@ export class QuizGameService {
 
   private snapshot: SessionSnapshot
 
-  private recentIds: string[]
+  private seenIds: Set<string>
+
+  private sessionMaxRounds: number
 
   constructor(repository: BlazonRepository, bestScoreStore: BestScoreStore, random: RandomProvider) {
     this.repository = repository
@@ -36,7 +38,8 @@ export class QuizGameService {
       selectedAnswer: null,
       lastResult: null,
     }
-    this.recentIds = []
+    this.seenIds = new Set<string>()
+    this.sessionMaxRounds = 0
   }
 
   getSnapshot(): SessionSnapshot {
@@ -45,22 +48,38 @@ export class QuizGameService {
 
   async start(settings: GameSettings): Promise<SessionSnapshot> {
     const pool = await this.repository.getByDifficulty(settings.difficulty)
+    this.seenIds = new Set<string>()
+    this.sessionMaxRounds =
+      settings.difficulty === 'easy' ? Math.min(EASY_MODE_MAX_ROUNDS, pool.length) : pool.length
+
+    const effectiveSettings: GameSettings = {
+      ...settings,
+      fixedRounds:
+        settings.mode === 'fixed'
+          ? Math.min(settings.fixedRounds, this.sessionMaxRounds)
+          : settings.fixedRounds,
+    }
+
+    const firstQuestion = createQuestion(
+      pool,
+      effectiveSettings.difficulty,
+      this.random,
+      [...this.seenIds],
+    )
+    this.markSeen(firstQuestion.blazon.id)
 
     this.snapshot = {
       status: 'running',
-      settings,
+      settings: effectiveSettings,
       score: 0,
       bestScore: this.bestScoreStore.getBestScore(),
       roundIndex: 1,
-      question: createQuestion(pool, settings.difficulty, this.random, this.recentIds),
+      question: firstQuestion,
       answerLocked: false,
       selectedAnswer: null,
       lastResult: null,
     }
 
-    if (this.snapshot.question) {
-      this.trackRecent(this.snapshot.question.blazon.id)
-    }
     return this.snapshot
   }
 
@@ -96,20 +115,30 @@ export class QuizGameService {
     }
 
     const isFixedMode = this.snapshot.settings.mode === 'fixed'
-    if (isFixedMode && this.snapshot.roundIndex >= this.snapshot.settings.fixedRounds) {
+    const hasReachedRoundLimit = isFixedMode
+      ? this.snapshot.roundIndex >= this.snapshot.settings.fixedRounds
+      : this.snapshot.roundIndex >= this.sessionMaxRounds
+
+    if (hasReachedRoundLimit) {
       this.finish()
       return this.snapshot
     }
 
     const pool = await this.repository.getByDifficulty(this.snapshot.settings.difficulty)
-    const nextQuestion = createQuestion(
-      pool,
-      this.snapshot.settings.difficulty,
-      this.random,
-      this.recentIds,
-    )
+    let nextQuestion
+    try {
+      nextQuestion = createQuestion(
+        pool,
+        this.snapshot.settings.difficulty,
+        this.random,
+        [...this.seenIds],
+      )
+    } catch {
+      this.finish()
+      return this.snapshot
+    }
 
-    this.trackRecent(nextQuestion.blazon.id)
+    this.markSeen(nextQuestion.blazon.id)
 
     this.snapshot = {
       ...this.snapshot,
@@ -131,6 +160,25 @@ export class QuizGameService {
     return this.snapshot
   }
 
+  goToMenu(): SessionSnapshot {
+    this.seenIds.clear()
+    this.sessionMaxRounds = 0
+
+    this.snapshot = {
+      status: 'idle',
+      settings: this.snapshot.settings,
+      score: 0,
+      bestScore: this.bestScoreStore.getBestScore(),
+      roundIndex: 0,
+      question: null,
+      answerLocked: false,
+      selectedAnswer: null,
+      lastResult: null,
+    }
+
+    return this.snapshot
+  }
+
   private finish(): void {
     const best = Math.max(this.snapshot.score, this.snapshot.bestScore)
     if (best > this.snapshot.bestScore) {
@@ -144,8 +192,8 @@ export class QuizGameService {
     }
   }
 
-  private trackRecent(id: string): void {
-    this.recentIds = [...this.recentIds, id].slice(-RECENT_WINDOW_SIZE)
+  private markSeen(id: string): void {
+    this.seenIds.add(id)
   }
 }
 

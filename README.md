@@ -51,6 +51,13 @@ npm run test
 npm run build
 ```
 
+### Version et changelog
+
+- Version actuelle: beta 0.1.2
+- Changelog: voir `CHANGELOG.md`
+- Regle d'equipe: mettre a jour le changelog a chaque evolution fonctionnelle, technique, test, ou correction.
+- Commande utile: `npm run release:notes -- 0.1.3-beta` pour pre-creer une nouvelle entree datee.
+
 ### Structure (resume)
 
 ```text
@@ -118,6 +125,13 @@ npm run lint
 npm run test
 npm run build
 ```
+
+### Version and changelog
+
+- Current version: beta 0.1.2
+- Changelog: see `CHANGELOG.md`
+- Team rule: update the changelog for every feature, technical change, test update, or bug fix.
+- Useful command: `npm run release:notes -- 0.1.3-beta` to pre-create a dated changelog entry.
 
 ### Structure (summary)
 

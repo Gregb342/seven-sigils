@@ -41,6 +41,10 @@ export function useQuizController() {
         const next = service.stop()
         setSnapshot({ ...next })
       },
+      goToMenu: () => {
+        const next = service.goToMenu()
+        setSnapshot({ ...next })
+      },
       resetError: () => setError(null),
     }),
     [],

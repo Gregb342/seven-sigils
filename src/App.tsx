@@ -8,7 +8,7 @@ import { StartScreen } from './presentation/components/StartScreen'
 import { useQuizController } from './presentation/hooks/useQuizController'
 
 function App() {
-  const { snapshot, loading, error, start, answer, nextRound, stop, resetError } = useQuizController()
+  const { snapshot, loading, error, start, answer, nextRound, stop, goToMenu, resetError } = useQuizController()
   const lastSettingsRef = useRef<GameSettings>({
     mode: 'fixed',
     difficulty: 'easy',
@@ -16,8 +16,9 @@ function App() {
   })
 
   const onStart = async (mode: GameSettings['mode'], difficulty: GameSettings['difficulty'], fixedRounds: number) => {
+    const maxFixedRounds = difficulty === 'easy' ? 30 : 40
     const safeFixedRounds = Number.isFinite(fixedRounds)
-      ? Math.max(5, Math.min(40, Math.round(fixedRounds)))
+      ? Math.max(5, Math.min(maxFixedRounds, Math.round(fixedRounds)))
       : 10
 
     const settings: GameSettings = {
@@ -49,10 +50,13 @@ function App() {
             onAnswer={answer}
             onNext={nextRound}
             onStop={stop}
+            onMainMenu={goToMenu}
           />
         )}
 
-        {snapshot.status === 'finished' && <EndScreen snapshot={snapshot} onReplay={onReplay} />}
+        {snapshot.status === 'finished' && (
+          <EndScreen snapshot={snapshot} onReplay={onReplay} onMainMenu={goToMenu} />
+        )}
 
         {error && (
           <div className="error-banner" role="alert">

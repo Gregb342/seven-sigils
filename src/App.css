@@ -195,6 +195,10 @@
   color: var(--ink-dim);
 }
 
+.source-fade-in {
+  animation: soft-fade-in 220ms ease-out;
+}
+
 .option-btn {
   padding: 0.9rem;
   border-color: var(--line);
@@ -282,6 +286,15 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes soft-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 

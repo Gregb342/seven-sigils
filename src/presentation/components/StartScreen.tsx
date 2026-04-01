@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Difficulty, GameMode } from '../../domain/models/types'
+import { APP_VERSION } from '../../version'
 
 interface StartScreenProps {
   bestScore: number
@@ -11,10 +12,15 @@ export function StartScreen({ bestScore, loading, onStart }: StartScreenProps) {
   const [mode, setMode] = useState<GameMode>('fixed')
   const [difficulty, setDifficulty] = useState<Difficulty>('easy')
   const [fixedRounds, setFixedRounds] = useState(10)
+  const maxFixedRounds = difficulty === 'easy' ? 30 : 40
+
+  useEffect(() => {
+    setFixedRounds((current) => Math.min(current, maxFixedRounds))
+  }, [maxFixedRounds])
 
   return (
     <section className="card intro-card" aria-labelledby="title">
-      <p className="eyebrow">Seven Sigils - Version Beta</p>
+      <p className="eyebrow">Seven Sigils - {APP_VERSION}</p>
       <h1 id="title">Quiz des blasons de Westeros et d'Essos</h1>
       <h2 id="title">(VERSION BETA)</h2>
       <p className="intro-text">
@@ -51,9 +57,12 @@ export function StartScreen({ bestScore, loading, onStart }: StartScreenProps) {
           <input
             type="number"
             min={5}
-            max={40}
+            max={maxFixedRounds}
             value={fixedRounds}
-            onChange={(event) => setFixedRounds(Number.parseInt(event.target.value, 10) || 10)}
+            onChange={(event) => {
+              const parsed = Number.parseInt(event.target.value, 10) || 10
+              setFixedRounds(Math.max(5, Math.min(maxFixedRounds, parsed)))
+            }}
             aria-label="Nombre de manches"
             disabled={mode !== 'fixed'}
           />

@@ -49,8 +49,12 @@ class InMemoryBestScoreStore implements BestScoreStore {
 }
 
 class FixedRandom implements RandomProvider {
+  private index = 0
+
   next(): number {
-    return 0.13
+    const value = ((this.index * 7 + 3) % 97) / 97
+    this.index += 1
+    return value
   }
 }
 
@@ -73,5 +77,46 @@ describe('QuizGameService', () => {
     snapshot = await game.nextRound()
     expect(snapshot.status).toBe('finished')
     expect(snapshot.bestScore).toBe(1)
+  })
+
+  it('does not repeat blazons in the same running session', async () => {
+    const repository = new InMemoryRepository(
+      ['stark', 'lannister', 'targaryen', 'arryn', 'greyjoy', 'bolton'].map(makeBlazon),
+    )
+    const store = new InMemoryBestScoreStore()
+    const game = new QuizGameService(repository, store, new FixedRandom())
+
+    let snapshot = await game.start({ mode: 'fixed', difficulty: 'hard', fixedRounds: 6 })
+    const seen = new Set<string>()
+
+    while (snapshot.status === 'running' && snapshot.question) {
+      expect(seen.has(snapshot.question.blazon.id)).toBe(false)
+      seen.add(snapshot.question.blazon.id)
+
+      snapshot = game.answer(snapshot.question.correctOption)
+      snapshot = await game.nextRound()
+    }
+
+    expect(seen.size).toBe(6)
+    expect(snapshot.status).toBe('finished')
+  })
+
+  it('caps easy infinite sessions to 30 rounds', async () => {
+    const slugs = Array.from({ length: 50 }, (_, index) => `house${index + 1}`)
+    const repository = new InMemoryRepository(slugs.map(makeBlazon))
+    const store = new InMemoryBestScoreStore()
+    const game = new QuizGameService(repository, store, new FixedRandom())
+
+    let snapshot = await game.start({ mode: 'infinite', difficulty: 'easy', fixedRounds: 50 })
+    let playedRounds = 0
+
+    while (snapshot.status === 'running' && snapshot.question) {
+      playedRounds += 1
+      snapshot = game.answer(snapshot.question.correctOption)
+      snapshot = await game.nextRound()
+    }
+
+    expect(playedRounds).toBe(30)
+    expect(snapshot.status).toBe('finished')
   })
 })

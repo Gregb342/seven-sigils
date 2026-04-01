@@ -1,3 +1,5 @@
+import { APP_VERSION } from '../../version'
+
 export function CreditsFooter() {
   const currentYear = new Date().getFullYear()
 
@@ -32,6 +34,7 @@ export function CreditsFooter() {
           Envoyer un feedback
         </a>
       </p>
+      <p>Version en cours: {APP_VERSION}</p>
     </footer>
   )
 }

@@ -3,9 +3,10 @@ import type { SessionSnapshot } from '../../domain/models/types'
 interface EndScreenProps {
   snapshot: SessionSnapshot
   onReplay: () => Promise<void>
+  onMainMenu: () => void
 }
 
-export function EndScreen({ snapshot, onReplay }: EndScreenProps) {
+export function EndScreen({ snapshot, onReplay, onMainMenu }: EndScreenProps) {
   return (
     <section className="card end-card">
       <p className="eyebrow">Partie terminée</p>
@@ -19,6 +20,9 @@ export function EndScreen({ snapshot, onReplay }: EndScreenProps) {
         }}
       >
         Rejouer
+      </button>
+      <button type="button" className="ghost-btn" onClick={onMainMenu}>
+        Menu principal
       </button>
     </section>
   )

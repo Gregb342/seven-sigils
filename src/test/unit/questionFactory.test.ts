@@ -46,11 +46,11 @@ describe('createQuestion', () => {
     expect(question.options).toContain(question.correctOption)
   })
 
-  it('avoids recently used blazons when possible', () => {
+  it('never picks an excluded blazon as the correct answer', () => {
     const random = new SequenceRandom([0.01, 0.21, 0.31, 0.41, 0.51])
-    const recentIds = ['stark', 'lannister']
-    const question = createQuestion(pool, 'hard', random, recentIds)
+    const excludedIds = ['stark', 'lannister']
+    const question = createQuestion(pool, 'hard', random, excludedIds)
 
-    expect(recentIds).not.toContain(question.blazon.id)
+    expect(excludedIds).not.toContain(question.blazon.id)
   })
 })

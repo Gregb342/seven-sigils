@@ -35,23 +35,49 @@ const snapshot: SessionSnapshot = {
 }
 
 describe('GameScreen', () => {
-  it('shows attribution under blazon and four options', () => {
+  it('hides source links before submitting an answer', () => {
     render(
       <GameScreen
         snapshot={snapshot}
         onAnswer={vi.fn()}
         onNext={vi.fn().mockResolvedValue(undefined)}
         onStop={vi.fn()}
+        onMainMenu={vi.fn()}
       />,
     )
 
-    expect(screen.getByText(/Auteur: Evrach/i)).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /source fichier/i })).toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: /source fichier/i })).not.toBeInTheDocument()
+    expect(
+      screen.queryByRole('link', { name: /article La Garde de Nuit/i }),
+    ).not.toBeInTheDocument()
     expect(
       screen.getAllByRole('button', {
         name: /Maison Stark|Maison Lannister|Maison Targaryen|Maison Baratheon/,
       }),
     ).toHaveLength(4)
     expect(screen.getByRole('button', { name: /Afficher un indice/i })).toBeInTheDocument()
+  })
+
+  it('shows source links after submitting an answer', () => {
+    const lockedSnapshot: SessionSnapshot = {
+      ...snapshot,
+      answerLocked: true,
+      selectedAnswer: 'Lannister',
+      lastResult: { isCorrect: false, correctOption: 'Stark' },
+    }
+
+    render(
+      <GameScreen
+        snapshot={lockedSnapshot}
+        onAnswer={vi.fn()}
+        onNext={vi.fn().mockResolvedValue(undefined)}
+        onStop={vi.fn()}
+        onMainMenu={vi.fn()}
+      />,
+    )
+
+    expect(screen.getByText(/Auteur: Evrach/i)).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /source fichier/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /article La Garde de Nuit/i })).toBeInTheDocument()
   })
 })

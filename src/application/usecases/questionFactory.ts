@@ -35,13 +35,16 @@ export function createQuestion(
   pool: Blazon[],
   difficulty: Difficulty,
   random: RandomProvider,
-  recentIds: string[],
+  excludedIds: string[],
 ): Question {
-  const available = pool.filter((item) => !recentIds.includes(item.id))
-  const targetPool = available.length >= 4 ? available : pool
-
-  if (targetPool.length < 4) {
+  if (pool.length < 4) {
     throw new Error('Not enough blazons to generate a question.')
+  }
+
+  const targetPool = pool.filter((item) => !excludedIds.includes(item.id))
+
+  if (targetPool.length === 0) {
+    throw new Error('No unseen blazons remaining for this session.')
   }
 
   const correct = pickOne(targetPool, random)

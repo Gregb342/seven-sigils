@@ -6,9 +6,10 @@ interface GameScreenProps {
   onAnswer: (option: string) => void
   onNext: () => Promise<void>
   onStop: () => void
+  onMainMenu: () => void
 }
 
-export function GameScreen({ snapshot, onAnswer, onNext, onStop }: GameScreenProps) {
+export function GameScreen({ snapshot, onAnswer, onNext, onStop, onMainMenu }: GameScreenProps) {
   const [hintIndex, setHintIndex] = useState(0)
   const question = snapshot.question
 
@@ -18,6 +19,7 @@ export function GameScreen({ snapshot, onAnswer, onNext, onStop }: GameScreenPro
 
   const hasHints = question.blazon.hints.length > 0
   const shownHints = question.blazon.hints.slice(0, hintIndex)
+  const showSources = snapshot.answerLocked
 
   const toHouseName = (familyLabel: string): string => `Maison ${familyLabel}`
 
@@ -59,17 +61,19 @@ export function GameScreen({ snapshot, onAnswer, onNext, onStop }: GameScreenPro
 
       <figure className="blazon-figure">
         <img src={question.blazon.imageUrl} alt={`Blason de la maison ${question.blazon.familyLabel}`} />
-        <figcaption>
-          Auteur: {question.blazon.attribution.author ?? 'auteur non renseigne'}
-          {' · '}
-          <a
-            href={question.blazon.attribution.sourcePageUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            source fichier
-          </a>
-        </figcaption>
+        {showSources && (
+          <figcaption className="source-fade-in">
+            Auteur: {question.blazon.attribution.author ?? 'auteur non renseigne'}
+            {' · '}
+            <a
+              href={question.blazon.attribution.sourcePageUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              source fichier
+            </a>
+          </figcaption>
+        )}
       </figure>
 
       <div className="options-grid" role="group" aria-label="Choix de familles">
@@ -109,15 +113,21 @@ export function GameScreen({ snapshot, onAnswer, onNext, onStop }: GameScreenPro
           </ul>
         )}
 
-        <p>
-          Source maison:{' '}
-          <a href={question.blazon.housePageUrl} target="_blank" rel="noopener noreferrer">
-            article La Garde de Nuit
-          </a>
-        </p>
+        {showSources && (
+          <p className="source-fade-in">
+            Source maison:{' '}
+            <a href={question.blazon.housePageUrl} target="_blank" rel="noopener noreferrer">
+              article La Garde de Nuit
+            </a>
+          </p>
+        )}
       </section>
 
       <div className="actions-row">
+        <button type="button" className="ghost-btn" onClick={onMainMenu}>
+          Menu principal
+        </button>
+
         <button type="button" className="ghost-btn" onClick={onStop}>
           Stop
         </button>
