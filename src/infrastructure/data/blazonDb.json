@@ -23,6 +23,7 @@
     "mallister",
     "selmy",
     "bracken",
+    "nerbosc",
     "crakehall",
     "glover",
     "manderly",
@@ -128,7 +129,16 @@
       "label": "Baremmon"
     },
     "belmore": {
-      "label": "Belmore"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Forchant"
+        },
+        {
+          "title": "Region",
+          "value": "Val d'Arryn"
+        }
+      ]
     },
     "bennis": {
       "label": "Bennis"
@@ -189,7 +199,16 @@
       "label": "Boulleau"
     },
     "bracken": {
-      "label": "Bracken"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Haye-Pierre"
+        },
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
     },
     "brax": {
       "label": "Brax"
@@ -278,7 +297,16 @@
       "label": "Cirley"
     },
     "clegane": {
-      "label": "Clegane"
+      "hints": [
+        {
+          "title": "Suzerain",
+          "value": "Maison Lannister"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        }
+      ]
     },
     "cleos": {
       "label": "Cleos"
@@ -293,7 +321,16 @@
       "label": "Condon"
     },
     "connington": {
-      "label": "Connington"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "La Griffonnière"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Orage"
+        }
+      ]
     },
     "corbois": {
       "label": "Corbois"
@@ -311,7 +348,16 @@
       "label": "Costayne"
     },
     "crakehall": {
-      "label": "Crakehall"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Crakehall"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        }
+      ]
     },
     "crane": {
       "label": "Crane"
@@ -338,7 +384,16 @@
       "label": "Darry"
     },
     "dayne": {
-      "label": "Dayne"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Les Météores"
+        },
+        {
+          "title": "Region",
+          "value": "Dorne"
+        }
+      ]
     },
     "delanoue": {
       "label": "Delanoue"
@@ -353,7 +408,20 @@
       "label": "Dombeck"
     },
     "dondarrion": {
-      "label": "Dondarrion"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Havrenoir"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Orage"
+        },
+        {
+          "title": "Statut",
+          "value": "Seigneurs des marches"
+        }
+      ]
     },
     "donniger": {
       "label": "Donniger"
@@ -437,7 +505,16 @@
       "label": "Fleaufort"
     },
     "florent": {
-      "label": "Florent"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Rubriant"
+        },
+        {
+          "title": "Region",
+          "value": "Bief"
+        }
+      ]
     },
     "foin": {
       "label": "Foin"
@@ -495,7 +572,16 @@
       "label": "Gerblance"
     },
     "glover": {
-      "label": "Glover"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Motte-la-Forêt"
+        },
+        {
+          "title": "Region",
+          "value": "Nord"
+        }
+      ]
     },
     "gouer": {
       "label": "Gouer"
@@ -580,7 +666,20 @@
       "label": "Hersy"
     },
     "hightower": {
-      "label": "Hightower"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Grand-Tour de Villevieille"
+        },
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Devise",
+          "value": "Nous éclairons la voie"
+        }
+      ]
     },
     "hollard": {
       "label": "Hollard"
@@ -622,7 +721,16 @@
       "label": "Jordayne"
     },
     "karstark": {
-      "label": "Karstark"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Karhold"
+        },
+        {
+          "title": "Region",
+          "value": "Nord"
+        }
+      ]
     },
     "keath": {
       "label": "Keath"
@@ -728,10 +836,28 @@
       "label": "Mallery"
     },
     "mallister": {
-      "label": "Mallister"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Salvemer"
+        },
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
     },
     "manderly": {
-      "label": "Manderly"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Blancport"
+        },
+        {
+          "title": "Region",
+          "value": "Nord"
+        }
+      ]
     },
     "manning": {
       "label": "Manning"
@@ -792,7 +918,16 @@
       "label": "Moreland"
     },
     "mormont": {
-      "label": "Mormont"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Île-aux-Ours"
+        },
+        {
+          "title": "Region",
+          "value": "Nord"
+        }
+      ]
     },
     "morrigen": {
       "label": "Morrigen"
@@ -822,7 +957,16 @@
       "label": "Negrebar"
     },
     "nerbosc": {
-      "label": "Nerbosc"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Corneilla"
+        },
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
     },
     "noirmarees": {
       "label": "Noirmarees"
@@ -965,10 +1109,28 @@
       "label": "Redding"
     },
     "redwyne": {
-      "label": "Redwyne"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "La Treille"
+        },
+        {
+          "title": "Region",
+          "value": "Bief"
+        }
+      ]
     },
     "reed": {
-      "label": "Reed"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Fort-Griseaux"
+        },
+        {
+          "title": "Region",
+          "value": "Nord"
+        }
+      ]
     },
     "reyne": {
       "label": "Reyne"
@@ -1004,7 +1166,16 @@
       "label": "Roxton"
     },
     "royce": {
-      "label": "Royce"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Roches-aux-runes"
+        },
+        {
+          "title": "Region",
+          "value": "Val d'Arryn"
+        }
+      ]
     },
     "ruthermont": {
       "label": "Ruthermont"
@@ -1034,7 +1205,16 @@
       "label": "Sarwyck"
     },
     "selmy": {
-      "label": "Selmy"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Les Éteules"
+        },
+        {
+          "title": "Region",
+          "value": "Terres de l'Orage"
+        }
+      ]
     },
     "serrett": {
       "label": "Serrett"
@@ -1138,7 +1318,16 @@
       ]
     },
     "tarly": {
-      "label": "Tarly"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Corcolline"
+        },
+        {
+          "title": "Region",
+          "value": "Bief"
+        }
+      ]
     },
     "tawney": {
       "label": "Tawney"
@@ -1251,7 +1440,20 @@
       "label": "Vassal"
     },
     "velaryon": {
-      "label": "Velaryon"
+      "hints": [
+        {
+          "title": "Demeure",
+          "value": "Marée Haute"
+        },
+        {
+          "title": "Localisation",
+          "value": "Île de Lamarck"
+        },
+        {
+          "title": "Region",
+          "value": "Baie de la Néra"
+        }
+      ]
     },
     "vendeloyn": {
       "label": "Vendeloyn"
