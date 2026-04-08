@@ -7,20 +7,15 @@ Le format s'inspire de Keep a Changelog et suit une logique semver adaptee au pr
 ## [0.1.3-beta] - 2026-04-08
 
 ### Ajoute
-- Ajout des indices (demeure/region et cas specifiques) pour les familles du mode facile issues du wiki La Garde de Nuit.
-- Nouveau champ `displayName` dans `blazonDb.json` pour personnaliser le nom affiche dans les choix de reponse.
 - Nouvelle page Encyclopedie accessible depuis l'accueil.
 - Barre de recherche dans l'encyclopedie (recherche par slug, label et displayName).
 - Affichage detaille par blason dans l'encyclopedie: image, nom affiche, type, region/indices et source.
 - Sections alphabetiques dynamiques dans l'encyclopedie (A, B, C...) uniquement quand des blasons existent pour la lettre.
-- Pagination de l'encyclopedie au-dela de 4 blasons affiches.
-- Ascenseur alphabetique cliquable pour aller directement a la page contenant une lettre.
+- Ajout des indices (demeure/region et cas specifiques) pour les familles du mode facile issues du wiki La Garde de Nuit.
 
 ### Modifie
-- Le libelle des options de quiz utilise desormais `displayName` quand il est defini, sinon le fallback reste `Maison <label>`.
-- Exemple : `dunk` s'affiche en jeu comme `Chevalier Errant Duncan Le Grand`.
-- Chargement d'un catalogue complet de blasons pour l'encyclopedie, independant des pools de jeu easy/hard.
-- Adaptation responsive de l'encyclopedie (rail alphabetique vertical desktop et horizontal mobile).
+- Affichage personnalisé des blasons qui n'appartiennent pas à des maisons, exemple "Maison Dunk" devient "Chevalier Errant Duncan le Grand".
+- Chargement d'un catalogue complet de blasons pour l'encyclopedie.
 
 ### Tests
 - Mise a jour des tests d'integration de l'accueil (ouverture de l'encyclopedie).

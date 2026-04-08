@@ -76,13 +76,47 @@
       "label": "Appleton"
     },
     "arcenciel": {
-      "label": "Arcenciel"
+      "label": "Arcenciel",
+      "displayName": "Garde Arc-en-ciel",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Garde_Arc-en-Ciel",
+      "hints": [
+        {
+          "title": "Origine",
+          "value": "Ordre de Chevalerie"
+        },
+        {
+          "title": "Fondateur",
+          "value": "Renly Baratheon"
+        },
+        {
+          "title": "Lord Commandant",
+          "value": "Ser Loras Tyrell"
+        }
+      ]
     },
     "ardoise": {
       "label": "Ardoise"
     },
     "arlan": {
-      "label": "Arlan"
+      "label": "Arlan",
+      "displayName": "Ser Arlan de l'Arbre-sous",
+      "kind": "special",
+      "housePageUrl": "https://www.lagardedenuit.com/wiki/index.php?title=Arlan_de_L%27Arbre-sous",
+      "hints": [
+        {
+          "title": "Type",
+          "value": "Chevalier errant"
+        },
+        {
+          "title": "Ecuyer",
+          "value": "Dunk"
+        },
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
     },
     "arryn": {
       "hints": [
@@ -101,7 +135,16 @@
       ]
     },
     "aubier": {
-      "label": "Aubier"
+      "label": "Aubier",
+      "displayName": "Chevalier d'Aubier rieur",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Chevalier_d%27Aubier_rieur",
+        "hints": [
+        {
+          "title": "Type",
+          "value": "Chevalier mystère"
+        }      
+      ]
     },
     "baelish": {
       "label": "Baelish"
@@ -123,7 +166,24 @@
       ]
     },
     "barbrey": {
-      "label": "Barbrey"
+      "label": "Barbrey",
+      "displayName": "Dame Barbrey Dustin",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Barbrey_Dustin#cite_note-2",
+      "hints": [
+        { 
+          "title": "Demeure",
+          "value": "Tertre-Bourg"
+        },
+        {
+          "title": "Region",
+          "value": "Nord"
+        },
+        {
+          "title": "Statut",
+          "value": "Dame Suzeraine"
+        }
+      ]
     },
     "baremmon": {
       "label": "Baremmon"
@@ -141,7 +201,24 @@
       ]
     },
     "bennis": {
-      "label": "Bennis"
+      "label": "Bennis",
+      "displayName": "Ser Bennis au Bouclier Brun",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Bennis",
+      "hints": [
+         {
+          "title": "Type",
+          "value": "Chevalier errant"
+         },
+        {
+          "title": "Service",
+          "value": "Maison Osgris"
+        },
+        {
+          "title": "Surnom",
+          "value": "Pue-Brun"
+        }
+      ]
     },
     "bettley": {
       "label": "Bettley"
@@ -150,13 +227,27 @@
       "label": "Beurpuits"
     },
     "blanetree": {
-      "label": "Blanetree"
+      "label": "Blatane",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Blatane",      
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Conflans"
+        }
+      ]
     },
     "blount": {
       "label": "Blount"
     },
     "bolling": {
-      "label": "Bolling"
+      "label": "Boulin",
+      "housePageUrl": "https://www.lagardedenuit.com/wiki/index.php?title=Maison_Boulin",      
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Terres de l'Orage"
+        }
+      ]
     },
     "bolton": {
       "hints": [
@@ -175,7 +266,18 @@
       ]
     },
     "bonfrere": {
-      "label": "Bonfrere"
+      "label": "Bonfrere de Cormartel",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Bonfr%C3%A8re_de_Cormartel",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Iles de Fer"
+        },
+        {
+          "title": "Ile",
+          "value": "Grand Wyk"
+        }
+      ]
     },
     "bonleu": {
       "label": "Bonleu"
@@ -193,7 +295,24 @@
       "label": "Boule"
     },
     "boulenfeu": {
-      "label": "Boulenfeu"
+      "label": "Boulenfeu",
+      "displayName": "Ser Quentyn Boule",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Quentyn_Boule",
+      "hints": [
+        {
+          "title": "Statut",
+          "value": "Chevalier Rebelle"
+        },
+        {
+          "title": "Allegeance",
+          "value": "Daemon Feunoyr"
+        },
+        {
+          "title": "Fils présumé",
+          "value": "Glendon Boule"
+        }
+      ]
     },
     "boulleau": {
       "label": "Boulleau"
@@ -217,16 +336,47 @@
       "label": "Bridges"
     },
     "bronn": {
-      "label": "Bronn"
+      "label": "Bronn",
+      "displayName": "Bronn de la Nera",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Bronn",
+      "hints": [
+        {
+          "title": "Statut",
+          "value": "Epée louée"
+        },
+        {
+          "title": "Allegeance",
+          "value": "Tyrion Lannister"
+        }
+      ]
     },
     "broom": {
-      "label": "Broom"
+      "label": "Geneste",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Geneste",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Lannister"
+        }
+      ]
     },
     "brousse": {
       "label": "Brousse"
     },
     "brune": {
-      "label": "Brune"
+      "label": "Brune de Combebrune",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Brune_de_Combebrune",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Presqu'ile de Claquepince"
+        }
+      ]
     },
     "buckler": {
       "label": "Buckler"
@@ -262,7 +412,18 @@
       "label": "Celtigar"
     },
     "cendregue": {
-      "label": "Cendregue"
+      "label": "Cendregué",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Cendregu%C3%A9",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Tyrell"
+        }
+      ]
     },
     "cendregue-alt": {
       "kind": "variant",
@@ -309,16 +470,33 @@
       ]
     },
     "cleos": {
-      "label": "Cleos"
+      "label": "Cleos",
+      "displayName": "Cleos Frey",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Cleos_Frey"
     },
     "cole": {
       "label": "Cole"
     },
     "colen": {
-      "label": "Colen"
+      "label": "Colen",
+      "displayName": "Ser Colen d'Etanverts",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Colen_d%27Etanverts"
     },
     "condon": {
-      "label": "Condon"
+      "label": "Cardon",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Cardon",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Nord"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Cerwyn"
+        }
+      ]
     },
     "connington": {
       "hints": [
@@ -366,7 +544,18 @@
       "label": "Cressey"
     },
     "crowl": {
-      "label": "Crowl"
+      "label": "Rhamp",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Rhamp",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Skagos"
+        },
+        {
+          "title": "Demeure",
+          "value": "Deepdown"
+        }
+      ]
     },
     "cuilletre": {
       "label": "Cuilletre"
@@ -375,7 +564,8 @@
       "label": "Cuy"
     },
     "dalluve": {
-      "label": "Dalluve"
+      "label": "D'Alluve",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_d%27Alluve"
     },
     "dalt": {
       "label": "Dalt"
@@ -396,16 +586,60 @@
       ]
     },
     "delanoue": {
-      "label": "Delanoue"
+      "label": "de la Nouë",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_de_la_Nou%C3%AB",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Tyrell"
+        },
+        {
+          "title": "Demeure",
+          "value": "Herbeval"
+        }
+      ]
     },
     "desessaims": {
-      "label": "Desessaims"
+      "label": "Des Essaims",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_des_Essaims",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Hightower"
+        },
+        {
+          "title": "Demeure",
+          "value": "Mielbois"
+        }
+      ]
     },
     "doggett": {
-      "label": "Doggett"
+      "label": "Doguette",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Doguette",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        }
+      ]
     },
     "dombeck": {
-      "label": "Dombeck"
+      "label": "Dombecq",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Dombecq",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        }
+      ]
     },
     "dondarrion": {
       "hints": [
@@ -446,7 +680,22 @@
       "label": "Dunn"
     },
     "durouvre": {
-      "label": "Durouvre"
+      "label": "du Rouvre",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_du_Rouvre",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Tyrell"
+        },
+        {
+          "title": "Demeure",
+          "value": "Vieux Rouvre"
+        }
+      ]
     },
     "dustin": {
       "label": "Dustin"
@@ -473,10 +722,39 @@
       "label": "Estren"
     },
     "euron": {
-      "label": "Euron"
+      "label": "Euron",
+      "displayName": "Euron Greyjoy",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Euron_Greyjoy",
+      "hints": [
+        {
+          "title": "Statut",
+          "value": "Capitaine du Silence, puis roi des Iles de fer"
+        },
+        {
+          "title": "Region",
+          "value": "Iles de Fer"
+        },
+        {          
+          "title": "Surnom",
+          "value": "L'Œil-de-Choucas"
+        }
+      ]
+
     },
     "falwell": {
-      "label": "Falwell"
+      "label": "Fallieres",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Falli%C3%A8res",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Terres de l'Ouest"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Lannister"
+        }
+      ]
     },
     "farman": {
       "label": "Farman"
@@ -500,7 +778,20 @@
       "label": "Feunoyr"
     },
     "filsduguerrier": {
-      "label": "Filsduguerrier"
+      "label": "Filsduguerrier",
+      "displayName": "Fils du Guerrier",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Fils_du_Guerrier",
+      "hints": [
+        {
+          "title": "Type",
+          "value": "Ordre de Chevalerie"
+        },
+        {
+          "title": "Autorité",
+          "value": "Grand Septon"
+        }
+      ]
     },
     "fleaufort": {
       "label": "Fleaufort"
@@ -524,7 +815,23 @@
       "label": "Follard"
     },
     "forestier": {
-      "label": "Forestier"
+      "label": "Forestier",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Forestier",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Nord"
+        },
+        {
+          "title": "Demeure",
+          "value": "Mont-De-Fer"
+        },
+        {
+          "title": "Devise",
+          "value": "De la glace naît le fer"
+        }
+      ]
+
     },
     "forrest": {
       "label": "Forrest"
@@ -533,7 +840,41 @@
       "label": "Fort"
     },
     "fossovoie": {
-      "label": "Fossovoie"
+      "label": "Fossovoie Pomme Rouge",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Fossovoie_pomme-rouge",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Suzerain",
+          "value": "Maison Tyrell"
+        },
+        {
+          "title": "Demeure",
+          "value": "Cidre"
+        }
+      ]
+    },
+    "fossovoie-alt": {
+      "label": "Fossovoie Pomme Verte",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Maison_Fossovoie_pomme-verte",
+      "hints": [
+        {
+          "title": "Region",
+          "value": "Bief"
+        },
+        {
+          "title": "Type",
+          "value": "Chevalier fieffé"
+        },
+        {
+          "title": "Demeure",
+          "value": "New Barrel"
+        }
+      ]
+
     },
     "fretilletrique": {
       "label": "Fretilletrique"
@@ -567,7 +908,20 @@
       "label": "Gaunt"
     },
     "gdn": {
-      "label": "Gdn"
+      "label": "Gdn",
+      "displayName": "Garde de Nuit",
+      "kind": "special",
+      "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Garde_de_Nuit",
+      "hints": [
+        {
+          "title": "Type",
+          "value": "Ordre Militaire"
+        },
+        {
+          "title": "Region",
+          "value": "Le Mur"
+        }
+      ]
     },
     "gerblance": {
       "label": "Gerblance"
