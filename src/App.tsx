@@ -1,19 +1,51 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
-import type { GameSettings } from './domain/models/types'
+import type { Blazon, GameSettings } from './domain/models/types'
 import { CreditsFooter } from './presentation/components/CreditsFooter'
+import { EncyclopediaScreen } from './presentation/components/EncyclopediaScreen'
 import { EndScreen } from './presentation/components/EndScreen'
 import { GameScreen } from './presentation/components/GameScreen'
 import { StartScreen } from './presentation/components/StartScreen'
 import { useQuizController } from './presentation/hooks/useQuizController'
+import { StaticBlazonRepository } from './infrastructure/repositories/StaticBlazonRepository'
 
 function App() {
   const { snapshot, loading, error, start, answer, nextRound, stop, goToMenu, resetError } = useQuizController()
+  const encyclopediaRepositoryRef = useRef(new StaticBlazonRepository())
+  const [homeView, setHomeView] = useState<'menu' | 'encyclopedia'>('menu')
+  const [encyclopediaEntries, setEncyclopediaEntries] = useState<Blazon[]>([])
+  const [loadingEncyclopedia, setLoadingEncyclopedia] = useState(false)
+  const [encyclopediaError, setEncyclopediaError] = useState<string | null>(null)
   const lastSettingsRef = useRef<GameSettings>({
     mode: 'fixed',
     difficulty: 'easy',
     fixedRounds: 10,
   })
+
+  const openEncyclopedia = async () => {
+    setHomeView('encyclopedia')
+
+    if (encyclopediaEntries.length > 0 || loadingEncyclopedia) {
+      return
+    }
+
+    setEncyclopediaError(null)
+    setLoadingEncyclopedia(true)
+
+    try {
+      const entries = await encyclopediaRepositoryRef.current.getCatalog()
+      setEncyclopediaEntries(entries)
+    } catch (e) {
+      setEncyclopediaError(e instanceof Error ? e.message : 'Erreur inconnue')
+    } finally {
+      setLoadingEncyclopedia(false)
+    }
+  }
+
+  const backToMenu = () => {
+    setHomeView('menu')
+    goToMenu()
+  }
 
   const onStart = async (mode: GameSettings['mode'], difficulty: GameSettings['difficulty'], fixedRounds: number) => {
     const maxFixedRounds = difficulty === 'easy' ? 30 : 40
@@ -40,7 +72,27 @@ function App() {
     <div className="app-shell">
       <main className="main-content">
         {snapshot.status === 'idle' && (
-          <StartScreen bestScore={snapshot.bestScore} loading={loading} onStart={onStart} />
+          <>
+            {homeView === 'menu' && (
+              <StartScreen
+                bestScore={snapshot.bestScore}
+                loading={loading}
+                onStart={onStart}
+                onOpenEncyclopedia={() => {
+                  void openEncyclopedia()
+                }}
+              />
+            )}
+
+            {homeView === 'encyclopedia' && (
+              <EncyclopediaScreen
+                entries={encyclopediaEntries}
+                loading={loadingEncyclopedia}
+                error={encyclopediaError}
+                onBack={() => setHomeView('menu')}
+              />
+            )}
+          </>
         )}
 
         {snapshot.status === 'running' && (
@@ -50,12 +102,12 @@ function App() {
             onAnswer={answer}
             onNext={nextRound}
             onStop={stop}
-            onMainMenu={goToMenu}
+            onMainMenu={backToMenu}
           />
         )}
 
         {snapshot.status === 'finished' && (
-          <EndScreen snapshot={snapshot} onReplay={onReplay} onMainMenu={goToMenu} />
+          <EndScreen snapshot={snapshot} onReplay={onReplay} onMainMenu={backToMenu} />
         )}
 
         {error && (

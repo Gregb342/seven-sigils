@@ -25,6 +25,39 @@ export class StaticBlazonRepository implements BlazonRepository {
     return this.cache[difficulty]
   }
 
+  async getCatalog(): Promise<Blazon[]> {
+    const modules = import.meta.glob('/All Blasons/*.png', {
+      eager: true,
+      import: 'default',
+    }) as Record<string, string>
+
+    return Object.entries(modules)
+      .map(([path, url]) => {
+        const fileName = path.split('/').pop() ?? ''
+        const slug = extractFamilySlug(fileName)
+        if (!slug) {
+          return null
+        }
+
+        const catalogEntry = getBlazonDbEntry(slug)
+
+        return toBlazon(path, url, {
+          allowAltVariant: true,
+          familyLabel: catalogEntry?.label,
+          displayName: catalogEntry?.displayName,
+          housePageUrl: catalogEntry?.housePageUrl,
+          hints: catalogEntry?.hints,
+          kind: catalogEntry?.kind,
+          variantOf: catalogEntry?.variantOf,
+          motto: catalogEntry?.motto,
+          domain: catalogEntry?.domain,
+          translation: catalogEntry?.translation,
+        })
+      })
+      .filter((item): item is Blazon => item !== null)
+      .sort((a, b) => a.familyLabel.localeCompare(b.familyLabel, 'fr'))
+  }
+
   private buildPools(): DifficultyPools {
     const modules = import.meta.glob('/All Blasons/*.png', {
       eager: true,
@@ -48,6 +81,7 @@ export class StaticBlazonRepository implements BlazonRepository {
         return toBlazon(path, url, {
           allowAltVariant: includeInHard,
           familyLabel: catalogEntry?.label,
+          displayName: catalogEntry?.displayName,
           housePageUrl: catalogEntry?.housePageUrl,
           hints: catalogEntry?.hints,
           kind: catalogEntry?.kind,

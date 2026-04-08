@@ -29,8 +29,8 @@ const snapshot: SessionSnapshot = {
         licenseUrl: 'https://creativecommons.org/licenses/by-sa/4.0/',
       },
     },
-    options: ['Stark', 'Lannister', 'Targaryen', 'Baratheon'],
-    correctOption: 'Stark',
+    options: ['Maison Stark', 'Maison Lannister', 'Maison Targaryen', 'Maison Baratheon'],
+    correctOption: 'Maison Stark',
   },
 }
 
@@ -62,8 +62,8 @@ describe('GameScreen', () => {
     const lockedSnapshot: SessionSnapshot = {
       ...snapshot,
       answerLocked: true,
-      selectedAnswer: 'Lannister',
-      lastResult: { isCorrect: false, correctOption: 'Stark' },
+      selectedAnswer: 'Maison Lannister',
+      lastResult: { isCorrect: false, correctOption: 'Maison Stark' },
     }
 
     render(

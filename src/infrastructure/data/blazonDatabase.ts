@@ -3,6 +3,7 @@ import db from './blazonDb.json'
 
 export interface BlazonDbEntry {
   label?: string
+  displayName?: string
   kind?: 'family' | 'special' | 'variant'
   variantOf?: string
   includeInHard?: boolean

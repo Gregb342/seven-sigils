@@ -38,6 +38,133 @@
   color: var(--ink-dim);
 }
 
+.encyclopedia-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.encyclopedia-header h1 {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.1vw, 2rem);
+}
+
+.encyclopedia-search {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.encyclopedia-search input {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  background: var(--panel-bg);
+  color: var(--ink);
+}
+
+.encyclopedia-count {
+  margin: 1rem 0 0.6rem;
+  color: var(--ink-dim);
+}
+
+.encyclopedia-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.encyclopedia-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.encyclopedia-letter-rail {
+  position: sticky;
+  top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.encyclopedia-letter-rail .ghost-btn {
+  min-width: 2.2rem;
+  padding: 0.35rem 0.45rem;
+  line-height: 1;
+}
+
+.encyclopedia-letter-rail .ghost-btn[aria-current='page'] {
+  border-color: var(--accent-1);
+  background: color-mix(in srgb, var(--accent-1) 12%, transparent);
+}
+
+.encyclopedia-section + .encyclopedia-section {
+  margin-top: 1rem;
+}
+
+.encyclopedia-section h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-dim);
+}
+
+.encyclopedia-item {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-bg);
+  padding: 0.9rem;
+}
+
+.encyclopedia-item img {
+  width: min(200px, 100%);
+  aspect-ratio: 1;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 0.5rem;
+}
+
+.encyclopedia-item h2 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.encyclopedia-item h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1rem;
+}
+
+.encyclopedia-item p {
+  margin: 0.25rem 0;
+  color: var(--ink-dim);
+}
+
+.encyclopedia-item a {
+  color: var(--accent-link);
+}
+
+.encyclopedia-hints ul {
+  margin: 0.35rem 0 0;
+  padding-inline-start: 1rem;
+}
+
+.encyclopedia-hints p {
+  margin-top: 0.25rem;
+}
+
+.encyclopedia-pagination {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+}
+
 .settings-grid {
   margin-top: 1.4rem;
   display: grid;
@@ -321,6 +448,31 @@
   .intro-text {
     margin-top: 0.55rem;
     font-size: 0.9rem;
+  }
+
+  .encyclopedia-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .encyclopedia-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .encyclopedia-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .encyclopedia-letter-rail {
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .encyclopedia-pagination {
+    flex-direction: column;
+    align-items: stretch;
   }
 
   .settings-grid {

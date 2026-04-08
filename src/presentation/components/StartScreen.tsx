@@ -6,9 +6,10 @@ interface StartScreenProps {
   bestScore: number
   loading: boolean
   onStart: (mode: GameMode, difficulty: Difficulty, fixedRounds: number) => Promise<void>
+  onOpenEncyclopedia: () => void
 }
 
-export function StartScreen({ bestScore, loading, onStart }: StartScreenProps) {
+export function StartScreen({ bestScore, loading, onStart, onOpenEncyclopedia }: StartScreenProps) {
   const [mode, setMode] = useState<GameMode>('fixed')
   const [difficulty, setDifficulty] = useState<Difficulty>('easy')
   const [fixedRounds, setFixedRounds] = useState(10)
@@ -76,6 +77,10 @@ export function StartScreen({ bestScore, loading, onStart }: StartScreenProps) {
         disabled={loading}
       >
         {loading ? 'Chargement...' : 'Lancer la partie'}
+      </button>
+
+      <button type="button" className="ghost-btn" onClick={onOpenEncyclopedia}>
+        Ouvrir l'encyclopedie
       </button>
 
       <p className="best-score">Meilleur score local: {bestScore}</p>

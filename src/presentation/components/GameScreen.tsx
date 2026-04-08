@@ -21,8 +21,6 @@ export function GameScreen({ snapshot, onAnswer, onNext, onStop, onMainMenu }: G
   const shownHints = question.blazon.hints.slice(0, hintIndex)
   const showSources = snapshot.answerLocked
 
-  const toHouseName = (familyLabel: string): string => `Maison ${familyLabel}`
-
   const getButtonClassName = (option: string): string => {
     if (!snapshot.answerLocked) {
       return 'option-btn'
@@ -85,7 +83,7 @@ export function GameScreen({ snapshot, onAnswer, onNext, onStop, onMainMenu }: G
             onClick={() => onAnswer(option)}
             disabled={snapshot.answerLocked}
           >
-            {toHouseName(option)}
+            {option}
           </button>
         ))}
       </div>
@@ -148,7 +146,7 @@ export function GameScreen({ snapshot, onAnswer, onNext, onStop, onMainMenu }: G
         <p className={snapshot.lastResult.isCorrect ? 'feedback good' : 'feedback bad'}>
           {snapshot.lastResult.isCorrect
             ? 'Bonne réponse.'
-            : `Incorrect. Bonne réponse: ${toHouseName(snapshot.lastResult.correctOption)}`}
+            : `Incorrect. Bonne réponse: ${snapshot.lastResult.correctOption}`}
         </p>
       )}
     </section>

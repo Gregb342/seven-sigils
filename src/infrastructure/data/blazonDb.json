@@ -431,6 +431,7 @@
     },
     "dunk": {
       "label": "Dunk",
+      "displayName": "Chevalier Errant Duncan Le Grand",
       "kind": "special",
       "includeInHard": true,
       "housePageUrl": "https://lagardedenuit.com/wiki/index.php?title=Duncan_Le_Grand",

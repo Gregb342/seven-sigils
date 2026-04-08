@@ -7,8 +7,16 @@ describe('StartScreen', () => {
   it('submits selected settings', async () => {
     const user = userEvent.setup()
     const onStart = vi.fn().mockResolvedValue(undefined)
+    const onOpenEncyclopedia = vi.fn()
 
-    render(<StartScreen bestScore={12} loading={false} onStart={onStart} />)
+    render(
+      <StartScreen
+        bestScore={12}
+        loading={false}
+        onStart={onStart}
+        onOpenEncyclopedia={onOpenEncyclopedia}
+      />,
+    )
 
     await user.selectOptions(screen.getByLabelText('Mode de jeu'), 'infinite')
     await user.selectOptions(screen.getByLabelText('Difficulté'), 'hard')
@@ -16,5 +24,8 @@ describe('StartScreen', () => {
 
     expect(onStart).toHaveBeenCalledWith('infinite', 'hard', 10)
     expect(screen.getByText(/Meilleur score local: 12/i)).toBeInTheDocument()
+
+    await user.click(screen.getByRole('button', { name: /Ouvrir l'encyclopedie/i }))
+    expect(onOpenEncyclopedia).toHaveBeenCalledTimes(1)
   })
 })

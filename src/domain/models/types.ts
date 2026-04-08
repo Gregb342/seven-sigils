@@ -18,6 +18,7 @@ export interface Blazon {
   id: string
   familySlug: string
   familyLabel: string
+  displayName?: string
   fileName: string
   imageUrl: string
   housePageUrl: string

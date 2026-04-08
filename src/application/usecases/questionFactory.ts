@@ -2,6 +2,10 @@ import type { Blazon, Difficulty, Question } from '../../domain/models/types'
 import type { RandomProvider } from '../../domain/ports'
 import { shuffle } from '../../domain/services/shuffle'
 
+function toOptionLabel(blazon: Blazon): string {
+  return blazon.displayName ?? `Maison ${blazon.familyLabel}`
+}
+
 function pickOne<T>(items: T[], random: RandomProvider): T {
   return items[Math.floor(random.next() * items.length)]
 }
@@ -55,13 +59,13 @@ export function createQuestion(
   }
 
   const options = shuffle(
-    [correct.familyLabel, ...distractors.map((item) => item.familyLabel)],
+    [toOptionLabel(correct), ...distractors.map((item) => toOptionLabel(item))],
     random,
   )
 
   return {
     blazon: correct,
     options,
-    correctOption: correct.familyLabel,
+    correctOption: toOptionLabel(correct),
   }
 }

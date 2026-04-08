@@ -8,6 +8,7 @@ const FILE_PATTERN = /^Blason-(.+)-2014-v01-256px\.png$/i
 interface ToBlazonOptions {
   allowAltVariant?: boolean
   familyLabel?: string
+  displayName?: string
   housePageUrl?: string
   hints?: HouseHint[]
   kind?: Blazon['kind']
@@ -77,6 +78,7 @@ export function toBlazon(filePath: string, imageUrl: string, options: ToBlazonOp
     id: familySlug,
     familySlug,
     familyLabel,
+    displayName: options.displayName ?? dbEntry?.displayName,
     fileName,
     imageUrl,
     housePageUrl,
